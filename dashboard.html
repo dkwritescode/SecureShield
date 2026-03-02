@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard | SecureShield</title>
+</head>
+<body style="background:#0f172a;color:white;text-align:center;padding-top:100px;">
+
+<h1>Welcome to SecureShield Dashboard</h1>
+<button onclick="logout()">Logout</button>
+
+<script>
+const token = localStorage.getItem("token");
+
+if (!token) {
+    window.location.href = "login.html";
+}
+
+function logout() {
+    localStorage.removeItem("token");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
